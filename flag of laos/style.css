@@ -1,0 +1,41 @@
+div.flag {
+    position: relative;
+    text-align: center;
+    background-color: rgb(226, 38, 38);
+    width: 500px;
+    height: 300px;
+    font-size: 25px;
+    border-radius: 20pt;
+    /* margin-left: 25%; */
+}
+
+div.flag > p {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+div.flag > div {
+    position: absolute;
+    background-color: rgb(32, 32, 145);
+    width: 500px;
+    height: 150px;
+}
+
+div.flag > div > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: beige;
+    width: 130px;
+    height: 130px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+    left: 12.5%;
+    border-radius: 50%;
+    font-size: 35px;
+}
