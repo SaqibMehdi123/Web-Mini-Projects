@@ -1,0 +1,79 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e3e991;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Slider Container */
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 0;
+}
+
+/* Logos Container */
+.logos {
+    display: flex;
+    align-items: center;
+    will-change: transform;
+    animation: slide 30s linear infinite;
+    transform: translateZ(0);
+}
+
+/* Individual Images */
+.image {
+    width: 110px;
+    margin: 0 10px;
+    /* Prevent image dragging */
+    -webkit-user-select: none;
+    user-select: none;
+    /* Sharpen image rendering during animation */
+    image-rendering: optimizeQuality;
+}
+
+/* Keyframes for Seamless Slide */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-130px * 10));
+    }
+}
+
+/* Pause animation on hover */
+.slider:hover .logos {
+    animation-play-state: paused;
+}
+
+/* Beautiful Horizontal Rule */
+hr {
+    width: 80%;
+    margin: 30px auto;
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #f80808, transparent);
+    position: relative;
+}
+
+hr:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    height: 1px;
+    background: rgba(248, 8, 8, 0.3);
+    box-shadow: 0 0 5px rgba(248, 8, 8, 0.5);
+}
